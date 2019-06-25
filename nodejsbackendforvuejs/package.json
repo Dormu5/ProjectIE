@@ -1,0 +1,52 @@
+{
+  "name": "jwttoken",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./dist && babel ./src -d ./dist",
+    "prestart": "npm run -s build",
+    "start": "NODE_ENV=production PORT=8080 node dist/index.js",
+    "dev": "NODE_ENV=development PORT=8080 nodemon -w ./ --exec \"babel-node ./\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/runtime": "^7.4.2",
+    "@babel/core": "^7.4.5",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.3",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "module_name": "^1.0.0",
+    "mongodb": "^3.2.2",
+    "mongoose": "^5.4.19",
+    "mongoose-url-slugs": "^1.0.2",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
+    "pug": "^2.0.3",
+    "qs": "^6.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "rimraf": "^2.6.2"
+  }
+}
